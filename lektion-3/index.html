@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/124ac6c2b5.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container">
+            <a class="navbar-brand me-4" href="#">Management Central</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-comment-alt-lines me-3"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-chart-area me-3"></i></a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="#"><i class="fas fa-cog"></i></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button class="btn" type="button" id="accountMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="d-flex align-items-center">
+                                    <div class="account">
+                                        <div class="account-name">Hans</div>
+                                        <div class="account-role">Manager</div>
+                                    </div>
+                                    <div class="initials d-flex align-items-center justify-content-center">
+                                        H
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="accountMenu">
+                                <li><a class="dropdown-item" href="#">Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- dashboard -->
+    <div id="dashboard" class="container mt-5">
+        <!-- page title -->
+        <div class="mb-4">
+            <h5>Dashboard</h5>
+            <p class="text-sub">
+                Overview of your Internet of Things
+            </p>
+        </div>
+
+        <!-- gridview -->
+        <div class="gridview">
+
+            <!-- statistics -->
+            <div id="statistics" class="card shadow">
+                <div class="content">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <div class="title">Daily Stats</div>
+                            <div class="ingress text-sub">1 000 000 messages sent</div>
+                        </div>
+                        <span class="sync-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </span>
+                    </div>
+
+                    <div class="stats mt-4">
+                        <!-- stat-list-item -->
+                        <div class="stat-list-item mb-3">
+                            <div class="stat-item">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div>
+                                    <div class="title">Total Devices</div>
+                                    <div class="ingress">Total Devices</div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                5
+                            </div>
+                        </div>
+                        
+                        <!-- stat-list-item -->
+                        <div class="stat-list-item mb-3">
+                            <div class="stat-item">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div>
+                                    <div class="title">New Devices</div>
+                                    <div class="ingress">Number of new devices</div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                0
+                            </div>
+                        </div>
+
+                        <!-- stat-list-item -->
+                        <div class="stat-list-item mb-3">
+                            <div class="stat-item">
+                                <div class="icon d-flex align-items-center justify-content-center">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <div>
+                                    <div class="title">C2D Count</div>
+                                    <div class="ingress">Cloud 2 Device messages</div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                56
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="footer">
+                    <img src="images/yellow-line.jpg" class="card-img-top" alt="yellow-line">
+                </div>
+            </div>
+
+
+            <!-- device list -->
+            <div id="device-list" class="card shadow">
+                <div class="content">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <div class="title">List of Devices</div>
+                            <div class="ingress text-sub">5 devices total</div>
+                        </div>
+                        <button class="btn btn-purple">New Device</button>
+                    </div>
+
+                    <div class="devices mt-4">
+                        <table class="table mt-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><i class="fas fa-microchip"></i></th>
+                                    <th scope="col">DeviceId</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- device item -->
+                                <tr>
+                                    <td><i class="fas fa-microchip"></i></td>
+                                    <td>73259e81-766c-4c19-a4f4-63a6a4ae4ac9</td>
+                                    <td>
+                                        <div>Vega</div>
+                                        <div class="ingress">sweden</div>
+                                    </td>
+                                    <td>
+                                        <div>2021-05-25</div>
+                                        <div class="ingress">last updated</div>
+                                    </td>
+                                    <td>
+                                        <div>Weather Sensor</div>
+                                        <div class="ingress">temperature, humidity</div>
+                                    </td>
+                                    <td>
+                                        <div class="status-online">online</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <i class="fas fa-comment-alt-lines me-2"></i>
+                                            <i class="fas fa-edit me-2"></i>
+                                            <i class="fas fa-trash"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><i class="fas fa-microchip"></i></td>
+                                    <td>73259e81-766c-4c19-a4f4-63a6a4ae4ac9</td>
+                                    <td>
+                                        <div>Vega</div>
+                                        <div class="ingress">sweden</div>
+                                    </td>
+                                    <td>
+                                        <div>2021-05-25</div>
+                                        <div class="ingress">last updated</div>
+                                    </td>
+                                    <td>
+                                        <div>Weather Sensor</div>
+                                        <div class="ingress">temperature, humidity</div>
+                                    </td>
+                                    <td>
+                                        <div class="status-online">online</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <i class="fas fa-comment-alt-lines me-2"></i>
+                                            <i class="fas fa-edit me-2"></i>
+                                            <i class="fas fa-trash"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="fas fa-microchip"></i></td>
+                                    <td>73259e81-766c-4c19-a4f4-63a6a4ae4ac9</td>
+                                    <td>
+                                        <div>Sundsvall</div>
+                                        <div class="ingress">sweden</div>
+                                    </td>
+                                    <td>
+                                        <div>2021-05-25</div>
+                                        <div class="ingress">last updated</div>
+                                    </td>
+                                    <td>
+                                        <div>Weather Sensor</div>
+                                        <div class="ingress">temperature, humidity</div>
+                                    </td>
+                                    <td>
+                                        <div class="status-online">online</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <i class="fas fa-comment-alt-lines me-2"></i>
+                                            <i class="fas fa-edit me-2"></i>
+                                            <i class="fas fa-trash"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="fas fa-microchip"></i></td>
+                                    <td>73259e81-766c-4c19-a4f4-63a6a4ae4ac9</td>
+                                    <td>
+                                        <div>Vega</div>
+                                        <div class="ingress">sweden</div>
+                                    </td>
+                                    <td>
+                                        <div>2021-05-25</div>
+                                        <div class="ingress">last updated</div>
+                                    </td>
+                                    <td>
+                                        <div>Weather Sensor</div>
+                                        <div class="ingress">temperature, humidity</div>
+                                    </td>
+                                    <td>
+                                        <div class="status-offline">offline</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <i class="fas fa-comment-alt-lines me-2"></i>
+                                            <i class="fas fa-edit me-2"></i>
+                                            <i class="fas fa-trash"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="fas fa-microchip"></i></td>
+                                    <td>73259e81-766c-4c19-a4f4-63a6a4ae4ac9</td>
+                                    <td>
+                                        <div>Stockholm</div>
+                                        <div class="ingress">sweden</div>
+                                    </td>
+                                    <td>
+                                        <div>2021-05-25</div>
+                                        <div class="ingress">last updated</div>
+                                    </td>
+                                    <td>
+                                        <div>Weather Sensor</div>
+                                        <div class="ingress">temperature, humidity</div>
+                                    </td>
+                                    <td>
+                                        <div class="status-offline">offline</div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <i class="fas fa-comment-alt-lines me-2"></i>
+                                            <i class="fas fa-edit me-2"></i>
+                                            <i class="fas fa-trash"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+﻿
+ 
+<!-- device list -->
+<div id="device-list" class="card shadow">
+    <div class="content">
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <div class="title">List of Devices</div>
+                <div class="ingress text-sub">@deviceitems.Count() devices total</div>
+            </div>
+            <button class="btn btn-purple">New Device</button>
+        </div>
+
+        <div class="devices mt-4">
+            @if (deviceitems.Count() > 0)
+            {
+
+                <table class="table mt-4">
+                    <thead>
+                        <tr>
+                            <th scope="col"><i class="fas fa-microchip"></i></th>
+                            <th scope="col">DeviceId</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Status</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+                        @foreach (var deviceitem in deviceitems)
+                        {
+                            <!-- device item -->
+                            <tr>
+                                <td><i class="fas fa-microchip"></i></td>
+                                <td>@deviceitem.DeviceId</td>
+                                <td>
+                                    <div>@deviceitem.Location.City</div>
+                                    <div class="ingress">@deviceitem.Location.Country</div>
+                                </td>
+                                <td>
+                                    <div>@deviceitem.LastUpdated</div>
+                                    <div class="ingress">last updated</div>
+                                </td>
+                                <td>
+                                    <div>@deviceitem.Type.Sensor</div>
+                                    <div class="ingress">@deviceitem.Type.Description</div>
+                                </td>
+                                <td>
+                                    @if (@deviceitem.Status == "online")
+                                    {
+                                        <div class="status-online">@deviceitem.Status</div>
+                                    }
+                                    else
+                                    {
+                                        <div class="status-offline">@deviceitem.Status</div>
+                                    }
+
+
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <i class="fas fa-comment-alt-lines me-2"></i>
+                                        <i class="fas fa-edit me-2"></i>
+                                        <i class="fas fa-trash"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+
+
+
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+@code {
+    private IEnumerable<DeviceItem> deviceitems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        deviceitems = new List<DeviceItem>();
+        deviceitems = await client.GetFromJsonAsync<IEnumerable<DeviceItem>>("https://na21-fa.azurewebsites.net/api/mock/devices");
+    }
+}

@@ -1,0 +1,97 @@
+﻿<!-- statistics -->
+<div id="statistics" class="card shadow">
+    <div class="content">
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <div class="title">Daily Stats</div>
+                <div class="ingress text-sub">@stats.TotalMessages messages sent</div>
+            </div>
+            <span class="sync-icon" @onclick="async () => { await GetDailyStats(); }">
+                <i class="fas fa-sync-alt"></i>
+            </span>
+        </div>
+
+        <div class="stats mt-4">
+
+            @if (stats != null)
+            {
+                <!-- stat-list-item -->
+                <div class="stat-list-item mb-3">
+                    <div class="stat-item">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <div class="title">Total Devices</div>
+                            <div class="ingress">Number of total devices</div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        @stats.TotalDevices
+                    </div>
+                </div>
+
+                <!-- stat-list-item -->
+                <div class="stat-list-item mb-3">
+                    <div class="stat-item">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <div class="title">New Devices</div>
+                            <div class="ingress">Number of new devices</div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        @stats.TotalNewDevices
+                    </div>
+                </div>
+
+                <!-- stat-list-item -->
+                <div class="stat-list-item mb-3">
+                    <div class="stat-item">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <div class="title">C2D Count</div>
+                            <div class="ingress">Cloud 2 Device messages</div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        @stats.TotalC2DCount
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+    <div class="footer">
+        <img src="images/yellow-line.jpg" class="card-img-top" alt="yellow-line">
+    </div>
+</div>
+
+@code {
+    private DailyStatsItem stats;
+
+    private async Task GetDailyStats()
+    {
+        stats = new DailyStatsItem();
+        stats = await client.GetFromJsonAsync<DailyStatsItem>("https://na21-fa.azurewebsites.net/api/mock/dailystats");
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetDailyStats();
+    }
+}
