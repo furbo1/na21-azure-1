@@ -396,7 +396,6 @@ D:\NA21\azure\lektion-3\BlazorManagementCentral\bin\Debug\net5.0\wwwroot\_framew
 D:\NA21\azure\lektion-3\BlazorManagementCentral\bin\Debug\net5.0\wwwroot\_framework\icudt_EFIGS.dat
 D:\NA21\azure\lektion-3\BlazorManagementCentral\bin\Debug\net5.0\wwwroot\_framework\icudt_no_CJK.dat
 D:\NA21\azure\lektion-3\BlazorManagementCentral\bin\Debug\net5.0\wwwroot\_framework\dotnet.5.0.6.js
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.csprojAssemblyReference.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.GeneratedMSBuildEditorConfig.editorconfig
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.AssemblyInfoInputs.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.AssemblyInfo.cs
@@ -404,26 +403,18 @@ D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagemen
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.MvcApplicationPartsAssemblyInfo.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.RazorComponent.input.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.RazorComponent.output.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\BlazorManagementCentral.dll
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.TagHelpers.input.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.TagHelpers.output.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.RazorCoreGenerate.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\App.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\build-gz\vA5tlVg+.gz
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\build-gz\B0CcDIhl.gz
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\build-gz\vGegHbCI.gz
@@ -622,7 +613,6 @@ D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\build-gz\b1UoKv
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\staticwebassets\BlazorManagementCentral.StaticWebAssets.Manifest.cache
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\staticwebassets\BlazorManagementCentral.StaticWebAssets.xml
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
-D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\scopedcss\bundle\BlazorManagementCentral.styles.css
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\scopedcss\projectbundle\BlazorManagementCentral.bundle.scp.css
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.RazorTargetAssemblyInfo.cache
@@ -636,3 +626,4 @@ D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaratio
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\RazorDeclaration\Shared\DeviceList.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Shared\DailyStats.razor.g.cs
 D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\Razor\Shared\DeviceList.razor.g.cs
+D:\NA21\azure\lektion-3\BlazorManagementCentral\obj\Debug\net5.0\BlazorManagementCentral.csproj.AssemblyReference.cache

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirstExample", "DatabaseFirstExample.csproj", "{CE27F0A7-F4C6-4C1F-B222-EB022C449AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirstAzure", "..\DatabaseFirstAzure\DatabaseFirstAzure.csproj", "{DD58FC46-5FC1-42E1-BC96-C565E39432B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE27F0A7-F4C6-4C1F-B222-EB022C449AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE27F0A7-F4C6-4C1F-B222-EB022C449AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE27F0A7-F4C6-4C1F-B222-EB022C449AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE27F0A7-F4C6-4C1F-B222-EB022C449AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD58FC46-5FC1-42E1-BC96-C565E39432B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD58FC46-5FC1-42E1-BC96-C565E39432B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD58FC46-5FC1-42E1-BC96-C565E39432B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD58FC46-5FC1-42E1-BC96-C565E39432B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27C40269-F5F2-40CF-BC23-1B5940A368CE}
+	EndGlobalSection
+EndGlobal
