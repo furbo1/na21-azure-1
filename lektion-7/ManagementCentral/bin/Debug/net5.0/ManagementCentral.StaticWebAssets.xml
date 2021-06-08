@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="D:\NA21\azure\lektion-7\ManagementCentral\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="D:\NA21\azure\lektion-7\ManagementCentral\obj\Debug\net5.0\scopedcss\bundle\" />
+</StaticWebAssets>

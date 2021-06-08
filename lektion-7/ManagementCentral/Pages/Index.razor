@@ -1,0 +1,87 @@
+﻿@page "/"
+    <div class="container mt-5">
+        <div>
+            <EditForm Model="@createDeviceModel" OnValidSubmit="@OnSubmit">
+                <DataAnnotationsValidator />
+
+                <div class="mb-2">
+                    <label for="deviceId">DeviceId</label>
+                    <InputText id="deviceId" class="form-control" @bind-Value="createDeviceModel.DeviceId" />
+                </div>
+                <div class="mb-2">
+                    <label for="placement">Placement</label>
+                    <InputText id="placement" class="form-control" @bind-Value="createDeviceModel.Placement" />
+                </div>
+                <div class="mb-2">
+                    <label for="coordinates">Coordinates (xx.xxxxx,xx.xxxx)</label>
+                    <InputText id="coordinates" class="form-control" @bind-Value="createDeviceModel.Coordinates" />
+                </div>
+                <div class="mb-2">
+                    <label for="sensorType">Sensor Type</label>
+                    <InputText id="sensorType" class="form-control" @bind-Value="createDeviceModel.SensorType" />
+                </div>
+                <button class="btn btn-secondary" type="submit">Add Device</button>
+            </EditForm>
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Placement</th>
+                    <th scope="col">Data</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (devices.Count() > 0)
+                {
+                    @foreach (var device in devices)
+                    {
+                <tr>
+                    <th scope="row">@device.deviceId</th>
+                    <td>@device.connectionState</td>
+                    <td>
+                        <div>@device.desired.placement</div>
+                        <div>@device.desired.coordinates[0],@device.desired.coordinates[1]</div>
+                    </td>
+                    <td>
+                        <div>@device.desired.sensorType</div>
+                        <div></div>
+                    </td>
+                    <td><i class="fas fa-trash" @onclick="async () => { await DeleteDeviceAsync(device.deviceId); }"></i></td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @code{
+        private IEnumerable<ListDeviceModel> devices = new List<ListDeviceModel>();
+        private CreateDeviceModel createDeviceModel = new CreateDeviceModel();
+
+        private async Task OnSubmit()
+        {
+            await client.PostAsJsonAsync("https://na21-fapp.azurewebsites.net/api/CreateDevice?code=7KTvXcTMYmaKquqR4rFPYIeMJnay3LrNXCflrnc/SFS/vfy1Fns1eA==", createDeviceModel);
+            createDeviceModel = new CreateDeviceModel();
+            await GetDevicesAsync();
+        }
+
+        private async Task GetDevicesAsync()
+        {
+            devices = await client.GetFromJsonAsync<IEnumerable<ListDeviceModel>>("https://na21-fapp.azurewebsites.net/api/GetDevices?code=xSMFWVdMiNaKVnRKUa3U6ahKHZ7ajwxRX8j4JuQGYM8X5Iq9zdOdFg==");
+        }
+
+        private async Task DeleteDeviceAsync(string id)
+        {
+            await client.DeleteAsync("https://na21-fapp.azurewebsites.net/api/DeleteDevice?code=pkhcYh99V8Y/oCK43ajDffPpMEk0lakbEojgJC9Ruf5EJTaqVHWuWw==&deviceid=" + id);
+            await GetDevicesAsync();
+        }
+
+
+        protected override async Task OnInitializedAsync()
+        {
+            await GetDevicesAsync();
+        }
+    }
